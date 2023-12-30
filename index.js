@@ -1,28 +1,32 @@
-function addContact(){
+function addContact() {
     var name = document.getElementById('name').value;
-      var lastName = document.getElementById('lastName').value;
-      var email = document.getElementById('email').value;
-      var phone = document.getElementById('phone').value;
-      var textarea = document.getElementById('textarea').value;
-      if (name && email) {
+    var lastName = document.getElementById('lastName').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var textarea = document.getElementById('textarea').value;
+    if (name && email) {
         var contact = {
-          name: name,
-          lastName: lastName,
-          email: email,
-          phone: phone,
-          textarea: textarea,
-          createdAt: new Date().getTime()
+            name: name,
+            lastName: lastName,
+            email: email,
+            phone: phone,
+            textarea: textarea,
+            createdAt: new Date().getTime()
         };
         var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
         contacts.push(contact);
         localStorage.setItem('contacts', JSON.stringify(contacts));
         displayContacts();
         clearInputFields();
-      } else {
+    } else {
         alert('Please enter both name and email');
-      }
     }
+}
 
-    function displayContacts() {
-        
-    }
+function displayContacts() {
+    var contactList = document.querySelector('.contact');
+    contactList.innerHTML = '';
+    var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+
+    contacts.sort((a, b) => a.createdAt - b.createdAt);
+}
