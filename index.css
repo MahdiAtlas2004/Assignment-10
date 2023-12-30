@@ -190,3 +190,48 @@ main .form .inform .row .name,
         position: relative;
         font-size: 4vw;
     }
+
+    @media screen and (max-width: 768px) {
+        main .form .inform .row .col {
+            width: 100%;
+        }
+
+        main .form {
+            margin-bottom: 100px; /* Adjust margin for smaller screens */
+        }
+
+        main .form .inform .row {
+            display: block;
+        }
+
+        main .contact {
+            grid-template-columns: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        main .form .inform {
+            width: 90%;
+        }
+
+        main .form .inform .row .name,
+        main .contact .item .line .before,
+        main .contact .item .line .show {
+            font-size: 1.2rem; /* Adjust font size for small screens */
+        }
+
+        #headContact {
+            font-size: 8vw; /* Adjust font size for smaller screens */
+        }
+
+        main .form .inform .row .col input,
+        main .form .inform .button button,
+        main .contact .item .line .buttons button {
+            font-size: 0.9rem; /* Adjust font size for small screens */
+        }
+
+        main .form .inform .row .textarea textarea {
+            height: 60px;
+        }
+    }
