@@ -11,3 +11,26 @@ main {
     width: 100%;
     background-color: #001923;
 }
+
+main::before{
+    content: "";
+    position: fixed;
+    left: 10%;
+    top: 5%;
+    background: linear-gradient(#ffeb3b , #e91e63);
+    border-radius: 50%;
+    border: none;
+    width: 400px;
+    height: 400px;
+}
+main::after{
+    content: "";
+    position: fixed;
+    left: 65%;
+    top: 40%;
+    background: linear-gradient(#2196f3 , #83d8ff);
+    border-radius: 50%;
+    border: none;
+    width: 350px;
+    height: 350px;
+}
