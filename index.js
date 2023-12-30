@@ -140,3 +140,11 @@ function saveEditedContact(index) {
         alert('Please enter both name and email');
     }
 }
+
+function cancelEdit() {
+    // Re-display the contacts without saving changes
+    displayContacts();
+
+    // Clear the input fields
+    clearInputFields();
+}
