@@ -141,3 +141,10 @@ function cancelEdit() {
 
     clearInputFields();
 }
+
+function deleteContact(index) {
+    var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+    contacts.splice(index, 1);
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+    displayContacts();
+}
