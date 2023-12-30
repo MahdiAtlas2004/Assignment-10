@@ -71,6 +71,7 @@ main .form .inform::before {
 }
 
 main .form .inform h1 {
+    text-align: center;
     font-size: 3rem;
     margin: 30px 0px;
     color: white;
