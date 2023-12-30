@@ -148,3 +148,13 @@ function deleteContact(index) {
     localStorage.setItem('contacts', JSON.stringify(contacts));
     displayContacts();
 }
+
+function clearInputFields() {
+    document.getElementById('name').value = '';
+    document.getElementById('lastName').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('textarea').value = '';
+  }
+
+  displayContacts();
