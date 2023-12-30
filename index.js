@@ -111,3 +111,32 @@ function editContact(index) {
         </div>
     `;
 }
+
+function saveEditedContact(index) {
+    var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+    var editedName = document.querySelector('.fn').value;
+    var editedLastName = document.querySelector('.ln').value;
+    var editedEmail = document.querySelector('.em').value;
+    var editedPhone = document.querySelector('.ph').value;
+    var editedTextarea = document.querySelector('.mess').value;
+
+    if (editedName && editedEmail) {
+        // Update the contact details in the array
+        contacts[index].name = editedName;
+        contacts[index].lastName = editedLastName;
+        contacts[index].email = editedEmail;
+        contacts[index].phone = editedPhone;
+        contacts[index].textarea = editedTextarea;
+
+        // Update the local storage
+        localStorage.setItem('contacts', JSON.stringify(contacts));
+
+        // Re-display the contacts
+        displayContacts();
+
+        // Clear the input fields
+        clearInputFields();
+    } else {
+        alert('Please enter both name and email');
+    }
+}
