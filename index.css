@@ -69,3 +69,16 @@ main .form .inform h1 {
     margin: 30px 0px;
     color: white;
 }
+
+main .form .inform .row .name,
+    main .contact h1,
+    main .contact .item .line .before,
+    main .contact .item .line .show {
+        font-size: 1.5rem; 
+    }
+
+    main .form .inform .row .col input,
+    main .form .inform .button button,
+    main .contact .item .line .buttons button {
+        font-size: 1vw; 
+    }
