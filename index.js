@@ -33,7 +33,6 @@ function displayContacts() {
         var contactDiv = document.createElement('div');
         contactDiv.className = 'item';
 
-        // Update the class names to match your HTML
         contactDiv.innerHTML = `
             <div class="line">
                 <span class="before">First Name: </span>
@@ -75,7 +74,6 @@ function editContact(index) {
     var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
     var contact = contacts[index];
 
-    // Replace the buttons with "Save" and "Cancel"
     var contactDivs = document.getElementsByClassName('item');
     var editedContactDiv = contactDivs[index];
     editedContactDiv.innerHTML = `
@@ -131,10 +129,7 @@ function saveEditedContact(index) {
         // Update the local storage
         localStorage.setItem('contacts', JSON.stringify(contacts));
 
-        // Re-display the contacts
         displayContacts();
-
-        // Clear the input fields
         clearInputFields();
     } else {
         alert('Please enter both name and email');
@@ -142,9 +137,7 @@ function saveEditedContact(index) {
 }
 
 function cancelEdit() {
-    // Re-display the contacts without saving changes
     displayContacts();
 
-    // Clear the input fields
     clearInputFields();
 }
