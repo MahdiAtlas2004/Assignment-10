@@ -10,6 +10,48 @@
     <script src="index.js"></script>
 </head>
 <body>
-    
+    <main>
+        <div class="form">
+            <div class="inform">
+                <h1>Create Contact</h1>
+                <div class="row">   
+                    <div class="col">
+                        <span class="name">First Name</span>
+                        <input type="text" class="firstname" id="name">
+                    </div>
+                    <div class="col">
+                        <span class="name">Last Name</span>
+                        <input type="text" class="lastname" id="lastName">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="name">Email</span>
+                        <input type="text" class="email" id="email">
+                    </div>
+                    <div class="col">
+                        <span class="name">Phone Number</span>
+                        <input type="text" class="phone" id="phone">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col textarea">
+                        <span class="name">Enter Your Message</span>
+                        <textarea name="textarea" maxlength="80" id="textarea"></textarea>
+                    </div>
+                </div>
+                <div class="row button">
+                    <button id="btn" onclick="addContact()"><b>Add Contact</b></button>
+                </div>    
+            </div>
+        </div>
+
+        <h1 id="headContact">Contacts</h1>
+        <div class="contact">
+            
+            
+        </div>
+       
+    </main>
 </body>
 </html>
