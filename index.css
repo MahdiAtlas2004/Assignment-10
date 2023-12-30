@@ -183,3 +183,10 @@ main .form .inform .row .name,
         background-color: rgba(0, 25, 50, 0.5);
         color: white;
     }
+
+    #headContact{
+        text-align: center;
+        color: white;
+        position: relative;
+        font-size: 4vw;
+    }
