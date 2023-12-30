@@ -155,6 +155,6 @@ function clearInputFields() {
     document.getElementById('email').value = '';
     document.getElementById('phone').value = '';
     document.getElementById('textarea').value = '';
-  }
+}
 
-  displayContacts();
+displayContacts();
