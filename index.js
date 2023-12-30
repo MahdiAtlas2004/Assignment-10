@@ -70,3 +70,44 @@ function displayContacts() {
         contactList.appendChild(contactDiv);
     });
 }
+
+function editContact(index) {
+    var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+    var contact = contacts[index];
+
+    // Replace the buttons with "Save" and "Cancel"
+    var contactDivs = document.getElementsByClassName('item');
+    var editedContactDiv = contactDivs[index];
+    editedContactDiv.innerHTML = `
+        <div class="line">
+            <span class="before">First Name: </span>
+            <input type="text" class="fn" value="${contact.name}">
+            <hr>
+        </div>
+        <div class="line">
+            <span class="before">Last Name: </span>
+            <input type="text" class="ln" value="${contact.lastName}">
+            <hr>
+        </div>
+        <div class="line">
+            <span class="before">Phone Number: </span>
+            <input type="text" class="ph" value="${contact.phone}">
+            <hr>
+        </div>
+        <div class="line">
+            <span class="before">Email: </span>
+            <input type="text" class="em" value="${contact.email}">
+            <hr>
+        </div>
+        <div class="line message">
+            <span class="before beforemess">Message: </span>
+            <textarea class="mess">${contact.textarea}</textarea>
+            <hr>
+        </div>
+        <div class="line buttons">
+            <button onclick="saveEditedContact(${index})">Save</button>
+            <button onclick="cancelEdit()">Cancel</button>
+            <hr>
+        </div>
+    `;
+}
