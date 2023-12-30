@@ -22,3 +22,7 @@ function addContact(){
         alert('Please enter both name and email');
       }
     }
+
+    function displayContacts() {
+        
+    }
