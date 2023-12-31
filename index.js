@@ -112,11 +112,13 @@ function editContact(index) {
 
 function saveEditedContact(index) {
     var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
-    var editedName = document.querySelector('.fn').value;
-    var editedLastName = document.querySelector('.ln').value;
-    var editedEmail = document.querySelector('.em').value;
-    var editedPhone = document.querySelector('.ph').value;
-    var editedTextarea = document.querySelector('.mess').value;
+    var editedContactDiv = document.getElementsByClassName('item')[index];
+
+    var editedName = editedContactDiv.querySelector('.fn').value;
+    var editedLastName = editedContactDiv.querySelector('.ln').value;
+    var editedEmail = editedContactDiv.querySelector('.em').value;
+    var editedPhone = editedContactDiv.querySelector('.ph').value;
+    var editedTextarea = editedContactDiv.querySelector('.mess').value;
 
     if (editedName && editedEmail) {
         // Update the contact details in the array
@@ -126,7 +128,6 @@ function saveEditedContact(index) {
         contacts[index].phone = editedPhone;
         contacts[index].textarea = editedTextarea;
 
-        // Update the local storage
         localStorage.setItem('contacts', JSON.stringify(contacts));
 
         displayContacts();
