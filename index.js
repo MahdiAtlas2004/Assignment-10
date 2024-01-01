@@ -1,4 +1,4 @@
-window.onload = function (){
+window.onload = function () {
     displayContacts();
 }
 
@@ -148,10 +148,15 @@ function cancelEdit() {
 }
 
 function deleteContact(index) {
-    var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
-    contacts.splice(index, 1);
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-    displayContacts();
+    var deleteConfirm = confirm("Do you want to delete this contact?");
+    if (deleteConfirm) {
+        var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+        contacts.splice(index, 1);
+        localStorage.setItem('contacts', JSON.stringify(contacts));
+        displayContacts();
+    } else {
+        displayContacts();
+    }
 }
 
 function clearInputFields() {
