@@ -1,3 +1,7 @@
+window.onload = function (){
+    displayContacts();
+}
+
 function addContact() {
     var name = document.getElementById('name').value;
     var lastName = document.getElementById('lastName').value;
