@@ -258,3 +258,20 @@ main .contact .item .buttons button:hover {
         height: 60px;
     }
 }
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    background-color: rgba(225, 225, 225, 0.756);
+}
+
+footer p{
+    position: absolute;
+    background-color: transparent;
+    color: black;
+}
